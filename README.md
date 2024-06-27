@@ -42,3 +42,29 @@ The script performs the following steps:
 
 ## Output
 #### The script will print:The average protein length if the file is processed successfully.
+
+# Task3 -Gene Count Visualization 
+
+## Overview
+#### This R script processes gene information from a compressed .gz file and visualizes the distribution of gene counts across chromosomes. It filters out unwanted entries, aggregates gene counts by chromosome, and produces a bar plot to show the number of genes per chromosome.
+
+## Usage
+
+* Place the gene information file (Homo_sapiens.gene_info.gz) in your working directory or specify the full path in the script.
+* Run the script in R or RStudio.
+  
+## Steps Performed by the Script
+
+* Read the file: Opens and reads data from a .gz compressed file, assuming the first line after the skipped row is the header.
+* Filtering data: Removes rows with chromosome identifiers containing | or are NA, and keeps only valid chromosomes (1-22, X, Y, MT, Un).
+* Aggregating data: Counts the number of genes per chromosome.
+* Data visualization: Generates a bar plot showing the number of genes per chromosome and saves the plot as a PDF (genes_per_chromosome.pdf).
+
+## Example Command
+
+source("Task3.R")
+
+## Output
+
+#### The script will generate a PDF file named genes_per_chromosome.pdf in the working directory, showing the average length of proteins by chromosome.
+
